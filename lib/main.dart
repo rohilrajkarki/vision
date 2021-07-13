@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ying_yang/pages/categorylistpage.dart';
 import 'package:ying_yang/pages/splash_page.dart';
 import 'package:ying_yang/pages/welcome_pages.dart';
 
