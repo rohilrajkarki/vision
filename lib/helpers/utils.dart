@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ying_yang/models/category.dart';
+import 'package:ying_yang/models/subcategory.dart';
 
 class Utils {
   static List<Category> getMockedCategories() {
@@ -9,8 +10,45 @@ class Utils {
         color: Color(0xFF00bfff),
         name: "1test1",
         imgName: 'welcome_leaf',
-        subCatogories: [],
         icon: 'd',
+        subCatogories: [
+          SubCategory(
+            color: Color(0xFF00bfff),
+            name: "hsd",
+            imgName: 'welcome',
+            icon: 'a',
+          ),
+          SubCategory(
+            color: Color(0xFF00bfff),
+            name: "jh",
+            imgName: 'welcome_leaf',
+            icon: 'a',
+          ),
+          SubCategory(
+            color: Color(0xFF00bfff),
+            name: "sjf",
+            imgName: 'welcome_leaf',
+            icon: 'a',
+          ),
+          SubCategory(
+            color: Color(0xFF00bfff),
+            name: "jkgttd",
+            imgName: 'valley',
+            icon: 'a',
+          ),
+          SubCategory(
+            color: Color(0xFF00bfff),
+            name: "hs.kddd",
+            imgName: 'welcome',
+            icon: 'a',
+          ),
+          SubCategory(
+            color: Color(0xFF00bfff),
+            name: "aasdfhsd",
+            imgName: 'valley',
+            icon: 'a',
+          ),
+        ],
       ),
       Category(
         color: Color(0xFFffff00),

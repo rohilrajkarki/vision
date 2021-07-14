@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ying_yang/models/category.dart';
 import 'package:ying_yang/widgets/category_icon.dart';
+import 'package:ying_yang/widgets/iconfont.dart';
+import 'package:ying_yang/widgets/main_AppBar.dart';
 
 class SelectedCategoryPage extends StatelessWidget {
   Category? selectedCategory;
@@ -10,49 +12,78 @@ class SelectedCategoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: MainAppBar(),
       body: Container(
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                CategoryIcon(
-                  color: this.selectedCategory!.color,
-                  iconName: this.selectedCategory!.icon,
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(this.selectedCategory!.name!,
-                    style: TextStyle(
-                      color: this.selectedCategory!.color,
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                    ))
-              ],
-            ),
-            Expanded(
-                child: GridView.count(
-              crossAxisCount: 2,
-              children: List.generate(
-                  this.selectedCategory!.name!.length,
-                  (index) => Container(
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              'assets/images/' +
-                                  this.selectedCategory!.imgName +
-                                  '.jpg',
-                              fit: BoxFit.cover,
-                              width: 100,
-                              height: 100,
-                            )
-                          ],
-                        ),
-                      )),
-            ))
-          ],
+        child: Padding(
+          padding: EdgeInsets.all(8),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CategoryIcon(
+                    color: this.selectedCategory!.color,
+                    iconName: this.selectedCategory!.icon,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(this.selectedCategory!.name!,
+                      style: TextStyle(
+                        color: this.selectedCategory!.color,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ))
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Expanded(
+                  child: GridView.count(
+                crossAxisCount: 2,
+                children: List.generate(
+                    this.selectedCategory!.name!.length,
+                    (index) => GestureDetector(
+                          onTap: () {
+                            //TODO: ontap
+                          },
+                          child: Container(
+                            child: Column(
+                              children: [
+                                ClipOval(
+                                  child: Image.asset(
+                                    'assets/images/' +
+                                        this
+                                            .selectedCategory!
+                                            .subCatogories![index]
+                                            .imgName +
+                                        '.jpg',
+                                    fit: BoxFit.cover,
+                                    width: 100,
+                                    height: 100,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                    this
+                                        .selectedCategory!
+                                        .subCatogories![index]
+                                        .name!,
+                                    style: TextStyle(
+                                      color: this.selectedCategory!.color,
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.bold,
+                                    ))
+                              ],
+                            ),
+                          ),
+                        )),
+              ))
+            ],
+          ),
         ),
       ),
     );
