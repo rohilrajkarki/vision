@@ -6,14 +6,14 @@ class Utils {
   static List<Category> getMockedCategories() {
     return [
       Category(
-        color: Color(0xFF64C038),
+        color: Color(0xFF00bfff),
         name: "1test1",
         imgName: 'welcome_leaf',
         subCatogories: [],
         icon: 'd',
       ),
       Category(
-        color: Color(0xFF80B038),
+        color: Color(0xFFffff00),
         name: "2tasdestt2",
         imgName: 'welcome',
         subCatogories: [],
@@ -27,14 +27,14 @@ class Utils {
         icon: 'c',
       ),
       Category(
-        color: Color(0xFF80E038),
+        color: Color(0xFFff00ff),
         name: "4fasdtestt",
         imgName: 'valley',
         subCatogories: [],
         icon: 'f',
       ),
       Category(
-        color: Color(0xFF80B038),
+        color: Color(0xFF808080),
         name: "2tasdestt2",
         imgName: 'welcome',
         subCatogories: [],
