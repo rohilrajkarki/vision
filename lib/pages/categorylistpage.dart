@@ -5,6 +5,7 @@ import 'package:ying_yang/pages/selected_category_page.dart';
 import 'package:ying_yang/widgets/category_bottom_bar.dart';
 import 'package:ying_yang/widgets/category_card.dart';
 import 'package:ying_yang/widgets/iconfont.dart';
+import 'package:ying_yang/widgets/main_AppBar.dart';
 
 class CategoryListPage extends StatelessWidget {
   //member variable to hold the reference to the list of cateogries
@@ -14,20 +15,7 @@ class CategoryListPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: Drawer(),
-      appBar: AppBar(
-        centerTitle: true,
-        title: IconFont(
-          color: Colors.greenAccent,
-          size: 40,
-          iconName: 'a',
-        ),
-        backgroundColor: Colors.transparent,
-        actions: [
-          Container(
-            child: Image.asset('assets/images/ying_yang.png'),
-          )
-        ],
-      ),
+      appBar: MainAppBar(),
       body: Container(
         child: Stack(
           children: [
@@ -52,7 +40,8 @@ class CategoryListPage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SelectedCategoryPage(),
+                              builder: (context) => SelectedCategoryPage(
+                                  selectedCategory: this.categories[index]),
                             ));
                       },
                     );

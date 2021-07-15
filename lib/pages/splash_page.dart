@@ -19,7 +19,7 @@ class SplashPage extends StatelessWidget {
       body: Container(
         // height: MediaQuery.of(context).size.height,
         // width: MediaQuery.of(context).size.width,
-        color: Colors.grey,
+        color: Colors.green,
         alignment: Alignment.center,
         child: IconFont(
           color: Colors.white,
