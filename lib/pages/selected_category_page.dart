@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ying_yang/models/category.dart';
+import 'package:ying_yang/pages/details_page.dart';
 import 'package:ying_yang/widgets/category_icon.dart';
-import 'package:ying_yang/widgets/iconfont.dart';
 import 'package:ying_yang/widgets/main_AppBar.dart';
 
 class SelectedCategoryPage extends StatelessWidget {
@@ -46,7 +46,10 @@ class SelectedCategoryPage extends StatelessWidget {
                     this.selectedCategory!.name!.length,
                     (index) => GestureDetector(
                           onTap: () {
-                            //TODO: ontap
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => DetailsPage()));
                           },
                           child: Container(
                             child: Column(

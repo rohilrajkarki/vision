@@ -4,7 +4,6 @@ import 'package:ying_yang/models/category.dart';
 import 'package:ying_yang/pages/selected_category_page.dart';
 import 'package:ying_yang/widgets/category_bottom_bar.dart';
 import 'package:ying_yang/widgets/category_card.dart';
-import 'package:ying_yang/widgets/iconfont.dart';
 import 'package:ying_yang/widgets/main_AppBar.dart';
 
 class CategoryListPage extends StatelessWidget {
