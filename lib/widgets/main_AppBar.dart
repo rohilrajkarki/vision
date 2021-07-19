@@ -22,11 +22,12 @@ class _MainAppBarState extends State<MainAppBar> {
       centerTitle: true,
       iconTheme: IconThemeData(color: widget.themeColor),
       title: IconFont(
-        color: Colors.greenAccent,
+        color: widget.themeColor,
         size: 40,
         iconName: 'a',
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.transparent,
+      elevation: 0,
       actions: [
         Container(
           child: Image.asset('assets/images/ying_yang.png'),

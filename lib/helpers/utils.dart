@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ying_yang/models/category.dart';
+import 'package:ying_yang/models/category_part.dart';
 import 'package:ying_yang/models/subcategory.dart';
 
 class Utils {
@@ -13,11 +14,37 @@ class Utils {
         icon: 'd',
         subCatogories: [
           SubCategory(
-            color: Color(0xFF00bfff),
-            name: "hsd",
-            imgName: 'welcome',
-            icon: 'a',
-          ),
+              color: Color(0xFF00bfff),
+              name: "hsd",
+              imgName: 'welcome',
+              icon: 'a',
+              parts: [
+                CategoryPart(
+                  name: 'this',
+                  imgName: 'welcome',
+                  isSelected: false,
+                ),
+                CategoryPart(
+                  name: 'isss',
+                  imgName: 'welcome_leaf',
+                  isSelected: false,
+                ),
+                CategoryPart(
+                  name: 'goall',
+                  imgName: 'valley',
+                  isSelected: false,
+                ),
+                CategoryPart(
+                  name: 'oiy',
+                  imgName: 'welcome',
+                  isSelected: false,
+                ),
+                CategoryPart(
+                  name: 'jjhhjk',
+                  imgName: 'valley',
+                  isSelected: false,
+                ),
+              ]),
           SubCategory(
             color: Color(0xFF00bfff),
             name: "jh",
