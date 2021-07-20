@@ -11,7 +11,7 @@ void main() {
     home:
         //CategoryListPage()
         SplashPage(duration: 1, goToPage: WelcomePage()),
-        // DetailsPage(
-        //     subCategory: Utils.getMockedCategories()[0].subCatogories![0]),
+    // DetailsPage(
+    // subCategory: Utils.getMockedCategories()[0].subCatogories![0]),
   ));
 }

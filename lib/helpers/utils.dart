@@ -20,7 +20,7 @@ class Utils {
               icon: 'a',
               parts: [
                 CategoryPart(
-                  name: 'this',
+                  name: 'tthis',
                   imgName: 'welcome',
                   isSelected: false,
                 ),
