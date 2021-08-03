@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ying_yang/pages/onboarding_page.dart';
+import 'package:ying_yang/widgets/botton.dart';
 
 import 'categorylistpage.dart';
 
@@ -116,6 +118,19 @@ class WelcomePage extends StatelessWidget {
                         ),
                       ),
                     ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  ThemeButton(
+                    whatcolor: Colors.green,
+                    onClick: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => OnboardingPage()));
+                    },
+                    label: 'To the Onboarding',
                   )
                 ],
               ),

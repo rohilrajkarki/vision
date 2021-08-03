@@ -145,10 +145,15 @@ class _DetailsPageState extends State<DetailsPage> {
                 children: [
                   Icon(Icons.shopping_cart_outlined,
                       size: 50, color: Colors.blue),
-                  Icon(
-                    Icons.location_pin,
-                    size: 50,
-                    color: Colors.blue,
+                  GestureDetector(
+                    onTap: () {
+                      //ToDo:,
+                    },
+                    child: Icon(
+                      Icons.location_pin,
+                      size: 50,
+                      color: Colors.blue,
+                    ),
                   ),
                 ],
               ),

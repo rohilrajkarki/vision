@@ -1,10 +1,28 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ying_yang/models/Onboarding_content.dart';
 import 'package:ying_yang/models/category.dart';
 import 'package:ying_yang/models/category_part.dart';
 import 'package:ying_yang/models/subcategory.dart';
 
 class Utils {
+  static List<OnboardingContent> getOnboarding() {
+    return [
+      OnboardingContent(
+        message: 'this here is a \n (go on) ',
+        img: 'onboard1',
+      ),
+      OnboardingContent(
+        message: 'beautiful day\n(Keep sliding)',
+        img: 'onboard2',
+      ),
+      OnboardingContent(
+        message: "enjoy onboarding with us\n (that's it)",
+        img: 'onboard3',
+      )
+    ];
+  }
+
   static List<Category> getMockedCategories() {
     return [
       Category(
