@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ying_yang/models/category_part.dart';
+import 'package:ying_yang/pages/map_page.dart';
 import 'package:ying_yang/widgets/category_icon.dart';
 import 'package:ying_yang/widgets/category_parts_list.dart';
 import 'package:ying_yang/widgets/main_AppBar.dart';
@@ -147,7 +147,8 @@ class _DetailsPageState extends State<DetailsPage> {
                       size: 50, color: Colors.blue),
                   GestureDetector(
                     onTap: () {
-                      //ToDo:,
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => MapPage()));
                     },
                     child: Icon(
                       Icons.location_pin,

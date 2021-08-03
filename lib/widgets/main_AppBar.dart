@@ -4,8 +4,10 @@ import 'iconfont.dart';
 
 class MainAppBar extends StatefulWidget implements PreferredSizeWidget {
   Color themeColor;
+  bool showProfilePic;
 
-  MainAppBar({this.themeColor = const Color(0xFF80C038)});
+  MainAppBar(
+      {this.themeColor = const Color(0xFF80C038), this.showProfilePic = true});
 
   @override
   _MainAppBarState createState() => _MainAppBarState();
@@ -29,8 +31,11 @@ class _MainAppBarState extends State<MainAppBar> {
       backgroundColor: Colors.transparent,
       elevation: 0,
       actions: [
-        Container(
-          child: Image.asset('assets/images/ying_yang.png'),
+        Opacity(
+          opacity: widget.showProfilePic ? 1 : 0,
+          child: Container(
+            child: Image.asset('assets/images/ying_yang.png'),
+          ),
         )
       ],
     );

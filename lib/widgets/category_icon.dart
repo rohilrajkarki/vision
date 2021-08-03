@@ -14,10 +14,10 @@ class CategoryIcon extends StatelessWidget {
     return ClipOval(
       child: Container(
         color: this.color,
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.all(this.padding),
         child: IconFont(
           color: Colors.white,
-          size: 30,
+          size: this.size,
           iconName: this.iconName!,
         ),
       ),
